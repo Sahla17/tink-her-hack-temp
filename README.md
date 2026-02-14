@@ -2,34 +2,33 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# WALK WITH ME 🎯
+WALK WITH ME 🎯
+Basic Details
 
-## Basic Details
+Team Name: LYORA
 
-### Team Name: LYORA
-
-### Team Members
+Team Members
 - Member 1: Sahla Nasrin cp - jyothi engineering college
 - Member 2: Shahanas Ruksana C P - jyothi engineering college
 
-### Hosted Project Link
+Hosted Project Link
+https://deluxe-conkies-3f9a16.netlify.app/
 
-
-### Project Description
+ Project Description
 "Walk With Me: Stay safe on every walk. If you don’t check in, your trusted contacts get your live location instantly."
 
-### The Problem statement
+The Problem statement
 “Walk With Me monitors your walk and sends automatic alerts to trusted contacts with your live location if you don’t confirm you’re safe.”
 
-### The Solution
+ The Solution
 “Walking alone can feel unsafe, stressful, and unpredictable. Our app ‘Walk With Me’ ensures your safety by alerting trusted contacts with your live location if you don’t check in.”
 
 
 ---
 
-## Technical Details
+Technical Details
 
-### Technologies/Components Used
+Technologies/Components Used
 
 **For Software:**
 - Languages used: JavaScript, HTML,CSS
@@ -37,14 +36,7 @@
 - Libraries used: none
 - Tools used: V S code,Windows OS
 
-**For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
-
----
-
-## Features
+ Features
 
 List the key features of your project:
 - Feature 1: Automatic Safety Check Timer
@@ -58,38 +50,30 @@ Sends emergency notifications via Email and SMS using a Promise-based workflow t
 
 ---
 
-## Implementation
+ Implementation
 
-### For Software:
+ For Software:
 
-#### Installation
+Installation
 ```bash
-# Clone the repository
+ Clone the repository
 git clone https://github.com/your-username/walk-with-me.git
 
-# Move into the project directory
+ Move into the project directory
 cd walk-with-me
 
 ```
 
-#### Run
+Run
 ```bash
-# Open the project
-# Option 1: Open index.html directly in your browser
+ Open the project
+ Option 1: Open index.html directly in your browser
 index.html
 
-# Option 2 (Recommended): Run using Live Server in VS Code
-# Right-click index.html → Open with Live Server
+ Option 2 (Recommended): Run using Live Server in VS Code
+ Right-click index.html → Open with Live Server
 
-```
-
-### For Hardware:
-
-#### Components Required
-[List all components needed with specifications]
-
-#### Circuit Setup
-[Explain how to set up the circuit]
+``
 
 ---
 
