@@ -194,60 +194,20 @@ Popup: "Are you safe?"
  Project Demo
 
  Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
+[https://youtu.be/iuMW9xaEYUk]
 
-*Explain what the video demonstrates - key features, user flow, technical highlights*
+*User opens the Walk With Me website
 
-### Additional Demos
-[Add any extra demo materials/links - Live site, APK download, online demo, etc.]
+Clicks on Start Walk
 
----
+Background safety timer starts
 
-## AI Tools Used (Optional - For Transparency Bonus)
+Safety confirmation popup appears
 
-If you used AI tools during development, document them here for transparency:
+User confirms safety → timer resets
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
+No response → emergency alerts sent with live location*
 
-**Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
 
-**Key Prompts Used:**
-- "Create a REST API endpoint for user authentication"
-- "Debug this async function that's causing race conditions"
-- "Optimize this database query for better performance"
-
-**Percentage of AI-generated code:** [Approximately X%]
-
-**Human Contributions:**
-- Architecture design and planning
-- Custom business logic implementation
-- Integration and testing
-- UI/UX design decisions
-
-*Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
-
----
-
-## Team Contributions
-
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
-
----
-
-## License
-
-This project is licensed under the [LICENSE_NAME] License - see the [LICENSE](LICENSE) file for details.
-
-**Common License Options:**
-- MIT License (Permissive, widely used)
-- Apache 2.0 (Permissive with patent grant)
-- GPL v3 (Copyleft, requires derivative works to be open source)
-
----
 
 Made with ❤️ at TinkerHub
