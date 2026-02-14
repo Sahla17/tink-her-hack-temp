@@ -83,11 +83,10 @@ index.html
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+[<img width="1920" height="1080" alt="Screenshot (3)" src="https://github.com/user-attachments/assets/06c7ce6b-e916-43bb-9dab-3664702ed085" />
+]
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+[]
 
 ![Screenshot3](Add screenshot 3 here with proper name)
 *Add caption explaining what this shows*
