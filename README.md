@@ -2,11 +2,11 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+[WAIK WITH ME] 🎯
 
-## Basic Details
+ Basic Details
 
-### Team Name: [Name]
+ Team Name: [LYORA]
 
 ### Team Members
 - Member 1: [Name] - [College]
@@ -22,7 +22,7 @@
 [What problem are you solving?]
 
 ### The Solution
-[How are you solving it?]
+ing it?]
 
 ---
 
