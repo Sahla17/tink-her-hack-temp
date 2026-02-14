@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walk Screen - Walk With Me</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="page-container">
+    <div class="page-content">
+      <h2 class="section-title">Let's Keep You Safe</h2>
+      
+      <div class="status-badge active" id="statusBadge">
+        🟢 Trip Sharing Active
+      </div>
+
+      <div style="text-align: center; margin: 30px 0;">
+        <div class="illustration">🚶‍♀️</div>
+      </div>
+
+      <div class="timer-container">
+        <p class="timer-status">Next Safety Check In</p>
+        <div class="timer-display" id="timerDisplay">5:00</div>
+      </div>
+
+      <div style="text-align: center; margin: 20px 0; color: #666;">
+        <p id="timerMessage">Walk safely. You'll get a check-in soon.</p>
+      </div>
+
+      <div class="quick-buttons">
+        <button class="btn btn-primary" id="startBtn" onclick="startWalk()">Start Walk</button>
+        <button class="btn btn-secondary hidden" id="stopBtn" onclick="stopWalk()">Stop Walk</button>
+        
+        <button class="btn btn-sos" onclick="triggerSOS()">🚨 QUICK SOS</button>
+        <button class="btn btn-fake-call" onclick="fakecall()">📞 Fake Call (Decoy)</button>
+        <button class="btn btn-share" onclick="shareTrip()">🔗 Share Trip Details</button>
+      </div>
+
+      <button class="btn btn-secondary" style="margin-top: 20px;" onclick="goToPage('index.html')">Exit</button>
+    </div>
+  </div>
+
+  <!-- Safety Check Modal -->
+  <div id="safetyModal" class="modal-overlay">
+    <div class="modal">
+      <div style="font-size: 60px; margin-bottom: 20px;">❓</div>
+      <h2>Are You Safe?</h2>
+      <p>We haven't heard from you. Please confirm you're safe.</p>
+      <p style="font-size: 14px; color: #666;">Responding in <span class="timer-countdown" id="modalTimer">30</span>s</p>
+      
+      <div class="modal-buttons">
+        <button class="btn btn-success" onclick="confirmSafe()">YES, I'm Safe</button>
+        <button class="btn btn-danger" onclick="triggerEmergency()">NO, Help!</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goToPage(path) {
+      window.location.href = path;
+    }
+  </script>
+  <script src="js/walk.js"></script>
+</body>
+</html>

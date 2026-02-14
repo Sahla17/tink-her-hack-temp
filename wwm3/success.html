@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe & Sound - Walk With Me</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="success-bg">
+  <div class="page-container">
+    <div class="page-content" style="background: transparent; color: white; box-shadow: none;">
+      <div class="success-container">
+        <div class="success-icon">💜</div>
+        <h1>You Reached Safely!</h1>
+        <p>Great job! You completed your walk safely.</p>
+
+        <div class="success-stats">
+          <div class="stat-item">
+            <div class="stat-label">Walk Duration</div>
+            <div class="stat-value" id="walkDuration">5:00</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Safety Checks</div>
+            <div class="stat-value" id="checksCount">1</div>
+          </div>
+        </div>
+
+        <p style="margin: 20px 0; color: #a7f3d0;">Keep walking safe. Share your location with trusted contacts next time.</p>
+
+        <button class="btn btn-primary" style="background: white; color: #10b981; margin-top: 30px;" onclick="goToPage('walk.html')">Start Another Walk</button>
+        <button class="btn btn-secondary" style="border-color: white; color: white;" onclick="goToPage('index.html')">Back to Home</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confetti Animation -->
+  <script>
+    function goToPage(path) {
+      window.location.href = path;
+    }
+  </script>
+  <script src="js/success.js"></script>
+</body>
+</html>

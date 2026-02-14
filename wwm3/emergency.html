@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Alert - Walk With Me</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="emergency-bg">
+  <div class="page-container">
+    <div class="page-content" style="background: transparent; color: white;">
+      <div class="emergency-alert">
+        <div class="alert-icon" id="alertIcon">🚨</div>
+        <h1>Emergency Activated!</h1>
+        <p id="emergencyMessage">No response detected. Emergency mode activated.</p>
+      </div>
+
+      <div class="alert-location">
+        <h3>📍 Your Location</h3>
+        <p id="locationCoords" style="color: #fef2f2; font-size: 12px; margin: 10px 0; word-break: break-all;">
+          Getting your location...
+        </p>
+        <a href="#" id="mapsLink" class="location-link" target="_blank">
+          📍 Open in Google Maps
+        </a>
+      </div>
+
+      <div style="margin: 25px 0;">
+        <h3 style="color: #fecaca; font-size: 16px; margin-bottom: 15px;">📧 Email Alert</h3>
+        <div class="message-preview">
+          <h4>Subject:</h4>
+          <p>Walk With Me - Emergency Safety Alert</p>
+          <div style="margin-top: 10px;">
+            <strong style="color: #fecaca;">Message:</strong>
+            <p style="margin-top: 8px;" id="emailMessage">Loading...</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="color: #fecaca; font-size: 16px; margin-bottom: 15px;">📱 SMS Alert</h3>
+        <div class="message-preview">
+          <h4>Message:</h4>
+          <p id="smsMessage">Loading...</p>
+        </div>
+      </div>
+
+      <div class="emergency-actions">
+        <button class="btn btn-stop-alarm" onclick="stopAlarm()">🔇 Stop Alarm</button>
+        <button class="btn btn-safe-now" onclick="confirmSafeEmergency()">✅ I'm Safe Now</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goToPage(path) {
+      window.location.href = path;
+    }
+  </script>
+  <script src="js/emergency.js"></script>
+</body>
+</html>

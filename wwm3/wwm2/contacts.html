@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Contacts - Walk With Me</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📞 Emergency Contacts</h1>
+    <p class="subtitle">Add people to alert in case of emergency</p>
+
+    <!-- Add Contact Form -->
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="contactName">Contact Name *</label>
+        <input type="text" id="contactName" name="contactName" required placeholder="e.g., Mom, Friend, Police">
+      </div>
+
+      <div class="form-group">
+        <label for="contactPhone">Phone Number *</label>
+        <input type="tel" id="contactPhone" name="contactPhone" required placeholder="e.g., +1-555-0123">
+      </div>
+
+      <button type="submit">➕ Add Contact</button>
+    </form>
+
+    <!-- Contacts List -->
+    <div class="contact-list" id="contactsList">
+      <p style="color: #888; padding: 20px 0;">No contacts added yet.</p>
+    </div>
+
+    <div class="success-message" id="successMsg">
+      ✅ Contact added!
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div style="margin-top: 30px;">
+      <button onclick="goToWalk()" id="proceedBtn" class="secondary" disabled>➡️ Proceed to Walk</button>
+      <button onclick="goBack()" class="secondary">← Go Back</button>
+    </div>
+  </div>
+
+  <script src="js/contacts.js"></script>
+</body>
+</html>

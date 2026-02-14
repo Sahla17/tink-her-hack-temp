@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walk With Me - Women Safety</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="page-container">
+    <div class="page-content">
+      <div class="landing-hero">
+        <div class="logo">💜</div>
+        <h1>Walk With Me</h1>
+        <p>Stay Safe While Walking. Real-Time Safety Monitoring & Emergency Alerts.</p>
+        <div class="illustration">👩‍🚶‍♀️</div>
+        <button class="btn btn-primary" onclick="goToPage('signup.html')">Start Now</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <div style="text-align: center; color: #666; font-size: 14px; margin-top: 20px;">
+        <p><strong>✨ Features:</strong></p>
+        <p>🔔 5-Min Safety Checks</p>
+        <p>📍 GPS Location Tracking</p>
+        <p>🚨 Emergency Alerts</p>
+        <p>👥 Trusted Contacts</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goToPage(path) {
+      window.location.href = path;
+    }
+    
+    // Ensure user has profile before starting
+    window.addEventListener('load', function() {
+      // Check if coming from signup confirmation
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('newuser') === 'true') {
+        console.log('New user created');
+      }
+    });
+  </script>
+</body>
+</html>

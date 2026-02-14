@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walk With Me - You Are Never Alone</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ============= OPENING SCREEN ============= -->
+  <div id="opening-screen" class="screen active">
+    <div class="opening-container">
+      <!-- Woman with phone illustration -->
+      <div class="opening-illustration">
+        <svg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <!-- Head -->
+          <circle cx="50" cy="25" r="14" fill="#ec4899"/>
+          <!-- Hair long -->
+          <ellipse cx="50" cy="20" rx="16" ry="18" fill="#d946a6"/>
+          <!-- Smile -->
+          <path d="M 45 28 Q 50 31 55 28" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- Eyes -->
+          <circle cx="46" cy="24" r="1.5" fill="#fff"/>
+          <circle cx="54" cy="24" r="1.5" fill="#fff"/>
+          <!-- Body -->
+          <ellipse cx="50" cy="45" rx="11" ry="15" fill="#a78bfa"/>
+          <!-- Arms out (holding phone) -->
+          <line x1="39" y1="42" x2="20" y2="35" stroke="#f472b6" stroke-width="4" stroke-linecap="round"/>
+          <line x1="61" y1="42" x2="80" y2="35" stroke="#f472b6" stroke-width="4" stroke-linecap="round"/>
+          <!-- Phone in right hand -->
+          <rect x="75" y="30" width="12" height="20" rx="2" fill="#1e293b" stroke="#ec4899" stroke-width="0.5"/>
+          <rect x="77" y="32" width="8" height="14" fill="#f0f0f0"/>
+          <!-- Screen glow -->
+          <circle cx="81" cy="39" r="2" fill="#ec4899" opacity="0.6"/>
+          <!-- Legs -->
+          <line x1="44" y1="60" x2="44" y2="80" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="56" y1="60" x2="56" y2="80" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Shoes -->
+          <ellipse cx="44" cy="82" rx="4" ry="3" fill="#ec4899"/>
+          <ellipse cx="56" cy="82" rx="4" ry="3" fill="#ec4899"/>
+          <!-- Confidence aura -->
+          <circle cx="50" cy="45" r="28" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.3" stroke-dasharray="5,5"/>
+        </svg>
+      </div>
+
+      <!-- Animated Logo -->
+      <div class="animated-logo">
+        <h1 class="logo-text">WALK WITH ME</h1>
+      </div>
+
+      <!-- Motivational Quote -->
+      <div class="quote-container">
+        <p class="quote">You are never alone.</p>
+        <p class="tagline">Stay safe. Stay connected. Stay aware.</p>
+      </div>
+
+      <!-- Start Button - Appears after animation -->
+      <button class="btn btn-start" id="startBtn" style="display: none;" onclick="goToSignup()">
+        START →
+      </button>
+    </div>
+  </div>
+
+  <!-- ============= SIGNUP SCREEN ============= -->
+  <div id="signup-screen" class="screen">
+    <div class="signup-container slide-in">
+      <div class="signup-illustration">
+        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <!-- Woman illustration -->
+          <circle cx="50" cy="25" r="15" fill="#ec4899"/>
+          <!-- Hair -->
+          <path d="M 35 22 Q 35 12 50 12 Q 65 12 65 22 Z" fill="#d946a6"/>
+          <!-- Body -->
+          <rect x="40" y="42" width="20" height="25" rx="3" fill="#a78bfa"/>
+          <!-- Arms -->
+          <rect x="25" y="45" width="15" height="8" rx="4" fill="#ec4899"/>
+          <rect x="60" y="45" width="15" height="8" rx="4" fill="#ec4899"/>
+          <!-- Phone in hand -->
+          <rect x="72" y="48" width="10" height="16" rx="2" fill="#0f172a"/>
+          <!-- Legs -->
+          <line x1="43" y1="68" x2="43" y2="85" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+          <line x1="57" y1="68" x2="57" y2="85" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h2>Create Your Profile</h2>
+      <p class="subtitle">Your information is private & secure</p>
+
+      <form id="signupForm">
+        <div class="form-group fade-in">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Your full name" required>
+        </div>
+
+        <div class="form-group fade-in">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group fade-in">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+1 (555) 000-0000" required>
+        </div>
+
+        <div class="form-divider">
+          <h3>Emergency Contacts</h3>
+          <p class="form-hint">Add 1-3 trusted contacts</p>
+        </div>
+
+        <div id="emergencyContactsList">
+          <div class="emergency-contact-group">
+            <div class="form-group fade-in">
+              <label>Contact 1 Name</label>
+              <input type="text" class="emergency-name" placeholder="Contact name" required>
+            </div>
+            <div class="form-group fade-in">
+              <label>Contact 1 Phone</label>
+              <input type="tel" class="emergency-phone" placeholder="+1 (555) 000-0000" required>
+            </div>
+            <div class="form-group fade-in">
+              <label>Contact 1 Email</label>
+              <input type="email" class="emergency-email" placeholder="contact@email.com">
+            </div>
+          </div>
+        </div>
+
+        <button type="button" id="addContactBtn" class="btn btn-secondary" style="width: 100%; margin-top: 10px;">+ Add Another Contact</button>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Continue →</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============= DASHBOARD SCREEN ============= -->
+  <div id="dashboard-screen" class="screen">
+    <div class="dashboard-container slide-in">
+      <div class="welcome-banner">
+        <div class="dashboard-illustration">
+          <svg width="120" height="120" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Woman walking confidently -->
+            <circle cx="50" cy="20" r="12" fill="#ec4899"/>
+            <!-- Hair -->
+            <path d="M 40 18 Q 40 10 50 10 Q 60 10 60 18 Z" fill="#d946a6"/>
+            <!-- Body with shield -->
+            <rect x="42" y="35" width="16" height="20" rx="2" fill="#a78bfa"/>
+            <!-- Shield -->
+            <path d="M 50 32 L 58 35 L 58 42 Q 58 48 50 52 Q 42 48 42 42 L 42 35 Z" fill="#F472B6" opacity="0.8" stroke="#ec4899" stroke-width="1"/>
+            <!-- Check mark inside shield -->
+            <path d="M 46 44 L 49 47 L 54 40" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Arms -->
+            <line x1="42" y1="38" x2="32" y2="35" stroke="#ec4899" stroke-width="3" stroke-linecap="round"/>
+            <line x1="58" y1="38" x2="68" y2="35" stroke="#ec4899" stroke-width="3" stroke-linecap="round"/>
+            <!-- Legs (walking) -->
+            <line x1="45" y1="56" x2="43" y2="72" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+            <line x1="55" y1="56" x2="57" y2="72" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+            <!-- Feet -->
+            <circle cx="43" cy="74" r="2" fill="#1e293b"/>
+            <circle cx="57" cy="74" r="2" fill="#1e293b"/>
+          </svg>
+        </div>
+        <h1>Welcome, <span id="userNameDisplay">Friend</span>! 👋</h1>
+        <p style="color: var(--text-light);">Stay safe, stay aware.</p>
+      </div>
+
+      <div class="dashboard-buttons">
+        <div class="btn-card fade-in delay-1" onclick="goToWalk()">
+          <span class="icon">🚶‍♀️</span>
+          <h3>Start Walk</h3>
+          <p>5-minute protected walk</p>
+        </div>
+
+        <div class="btn-card fade-in delay-2" onclick="goToSafetyTools()">
+          <span class="icon">🛡️</span>
+          <h3>Safety Tools</h3>
+          <p>Fake call, share location & more</p>
+        </div>
+
+        <div class="btn-card fade-in delay-3" onclick="goToSignup()">
+          <span class="icon">👤</span>
+          <h3>Edit Contacts</h3>
+          <p>Update your information</p>
+        </div>
+      </div>
+
+      <footer class="app-footer">Stay Safe ❤️</footer>
+    </div>
+  </div>
+
+  <!-- ============= WALK MODE SCREEN ============= -->
+  <div id="walk-screen" class="screen">
+    <div class="walk-container">
+      <div class="walk-header">
+        <h2>Your Protected Walk</h2>
+        <button class="btn-close" onclick="backToDashboard()">✕</button>
+      </div>
+
+      <!-- Safety illustration -->
+      <div class="walk-illustration">
+        <svg width="120" height="120" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <!-- Woman walking with shield -->
+          <circle cx="50" cy="22" r="12" fill="#ec4899"/>
+          <!-- Hair -->
+          <path d="M 40 20 Q 40 12 50 12 Q 60 12 60 20 Z" fill="#d946a6"/>
+          <!-- Body -->
+          <ellipse cx="50" cy="40" rx="10" ry="13" fill="#a78bfa"/>
+          <!-- Shield (protection) -->
+          <path d="M 50 38 L 58 42 L 58 50 Q 58 58 50 62 Q 42 58 42 50 L 42 42 Z" fill="#f472b6" opacity="0.7" stroke="#ec4899" stroke-width="1.5"/>
+          <!-- Shield checkmark -->
+          <path d="M 46 50 L 49 53 L 54 48" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Arms -->
+          <line x1="40" y1="40" x2="28" y2="38" stroke="#ec4899" stroke-width="3" stroke-linecap="round"/>
+          <line x1="60" y1="40" x2="72" y2="38" stroke="#ec4899" stroke-width="3" stroke-linecap="round"/>
+          <!-- Legs walking -->
+          <line x1="47" y1="54" x2="46" y2="72" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="53" y1="54" x2="54" y2="72" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Shoes -->
+          <circle cx="46" cy="74" r="2.5" fill="#ec4899"/>
+          <circle cx="54" cy="74" r="2.5" fill="#ec4899"/>
+          <!-- Motion lines -->
+          <line x1="65" y1="68" x2="75" y2="68" stroke="#a78bfa" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+          <line x1="65" y1="75" x2="75" y2="75" stroke="#a78bfa" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- Timer Display -->
+      <div class="timer-display">
+        <div class="timer-big" id="timerDisplay">5:00</div>
+        <p class="timer-label">Protected Walk Timer</p>
+      </div>
+
+      <!-- Status -->
+      <div class="status-box">
+        <span class="status-dot"></span>
+        <span id="statusText">🚶 Moving. Staying safe.</span>
+      </div>
+
+      <!-- Buttons -->
+      <div class="walk-actions">
+        <button class="btn btn-secondary" onclick="stopWalk()">✓ Stop Walk</button>
+        <button class="btn btn-danger pulse" onclick="triggerEmergency()">🚨 EMERGENCY</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============= SAFETY CHECK MODAL ============= -->
+  <div id="safetyModal" class="modal" style="display: none;">
+    <div class="modal-overlay"></div>
+    <div class="modal-content slide-up">
+      <h2>❓ Are You Safe?</h2>
+      <p>Please respond within <span id="graceCountdown" class="countdown">30</span> seconds</p>
+      
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="modal-buttons">
+        <button class="btn btn-primary" onclick="respondSafe()">✅ Yes, I'm Safe</button>
+        <button class="btn btn-danger" onclick="triggerEmergency()">❌ Help!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============= EMERGENCY SCREEN ============= -->
+  <div id="emergency-screen" class="screen">
+    <div class="emergency-container flash-warning">
+      <div class="emergency-header">
+        <h1>🚨 EMERGENCY ALERT SENT</h1>
+        <p>Your emergency contacts have been notified</p>
+      </div>
+
+      <div class="emergency-info">
+        <div class="info-box">
+          <h3>📍 Your Location</h3>
+          <p id="locationInfo">Fetching location...</p>
+          <a id="mapLink" href="#" target="_blank" class="btn btn-secondary" style="display: inline-block; margin-top: 10px;">View on Maps</a>
+        </div>
+
+        <div id="contactsNotified" class="info-box">
+          <h3>📱 Contacts Notified</h3>
+          <div id="notifiedContactsList"></div>
+        </div>
+
+        <div class="info-box">
+          <h3>📱 SMS Alert</h3>
+          <p id="smsPreview">Alert sent to emergency contacts</p>
+        </div>
+
+        <div class="info-box">
+          <h3>📧 Email Alert</h3>
+          <p id="emailPreview">Alert email sent</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" onclick="backToDashboard()">Back to Dashboard</button>
+    </div>
+  </div>
+
+  <!-- ============= SAFETY TOOLS SCREEN ============= -->
+  <div id="safety-tools-screen" class="screen">
+    <div class="safety-tools-container slide-in">
+      <h2>🛡️ Safety Tools</h2>
+      <p class="subtitle">Extra protection features</p>
+
+      <div class="tools-grid">
+        <!-- Fake Call -->
+        <div class="tool-card fade-in delay-1" onclick="triggerFakeCall()">
+          <span class="icon">☎️</span>
+          <h3>Fake Call</h3>
+          <p>Get an emergency call to escape</p>
+          <button class="btn btn-secondary">Trigger</button>
+        </div>
+
+        <!-- Live Tracking -->
+        <div class="tool-card fade-in delay-2" onclick="goToLiveTracking()">
+          <span class="icon">📍</span>
+          <h3>Live Tracking</h3>
+          <p>Share location with trusted contacts</p>
+          <button class="btn btn-secondary">Share</button>
+        </div>
+
+        <!-- Shake Alert -->
+        <div class="tool-card fade-in delay-3" onclick="enableShakeDetection()">
+          <span class="icon">📳</span>
+          <h3>Shake Alert</h3>
+          <p id="shakeStatus">Shake device to trigger alarm</p>
+          <button class="btn btn-secondary" id="shakeBtn">Activate</button>
+        </div>
+
+        <!-- Voice Command -->
+        <div class="tool-card fade-in delay-4" onclick="enableVoiceCommand()">
+          <span class="icon">🎤</span>
+          <h3>Voice Command</h3>
+          <p id="voiceStatus">Say "HELP" to trigger alert</p>
+          <button class="btn btn-secondary" id="voiceBtn">Activate</button>
+        </div>
+
+        <!-- Quick Siren -->
+        <div class="tool-card fade-in delay-5" onclick="triggerSiren()">
+          <span class="icon">📢</span>
+          <h3>Quick Siren</h3>
+          <p>Maximum volume alarm sound</p>
+          <button class="btn btn-danger">ACTIVATE SIREN</button>
+        </div>
+      </div>
+
+      <button class="btn btn-secondary" onclick="backToDashboard()">Back to Dashboard</button>
+    </div>
+  </div>
+
+  <!-- ============= FAKE CALL SCREEN ============= -->
+  <div id="fake-call-screen" class="screen">
+    <div class="fake-call-container">
+      <div class="caller-avatar pulse">
+        <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <!-- Head -->
+          <circle cx="50" cy="30" r="16" fill="#ec4899"/>
+          <!-- Hair -->
+          <path d="M 36 28 Q 36 16 50 16 Q 64 16 64 28 Z" fill="#d946a6"/>
+          <!-- Smile -->
+          <path d="M 44 35 Q 50 38 56 35" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Eyes happy -->
+          <path d="M 43 30 L 46 33" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M 54 30 L 57 33" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <!-- Body -->
+          <ellipse cx="50" cy="55" rx="12" ry="16" fill="#a78bfa"/>
+          <!-- Arms -->
+          <line x1="38" y1="50" x2="20" y2="45" stroke="#f472b6" stroke-width="4" stroke-linecap="round"/>
+          <line x1="62" y1="50" x2="80" y2="45" stroke="#f472b6" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="caller-info">
+        <h2>Mom</h2>
+        <p>Incoming call...</p>
+      </div>
+
+      <div class="call-timer">
+        <div class="timer-circle">
+          <span id="callTimer">15</span>
+        </div>
+      </div>
+
+      <div class="call-buttons">
+        <button class="btn-circle accept" onclick="acceptCall()">📞</button>
+        <button class="btn-circle decline" onclick="declineCall()">🔴</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============= LIVE TRACKING SCREEN ============= -->
+  <div id="live-tracking-screen" class="screen">
+    <div class="tracking-container slide-in">
+      <h2>📍 Live Tracking</h2>
+      
+      <div class="tracking-info">
+        <div class="info-box">
+          <h3>Your Location</h3>
+          <p id="trackingLocation">Fetching...</p>
+          <a id="trackingMapLink" href="#" target="_blank" class="btn btn-secondary" style="display: inline-block; margin-top: 10px;">Open Maps</a>
+        </div>
+
+        <div class="info-box">
+          <h3>Share with Contact</h3>
+          <p id="shareMessage">Share this link with your emergency contact</p>
+          <button class="btn btn-primary" onclick="copyTrackingLink()">📋 Copy Link</button>
+        </div>
+      </div>
+
+      <button class="btn btn-secondary" onclick="backToDashboard()">Back to Dashboard</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

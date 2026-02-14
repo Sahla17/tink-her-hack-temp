@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Contacts - Walk With Me</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="page-container">
+    <div class="page-content">
+      <h2 class="section-title">Emergency Contacts</h2>
+      <p class="section-subtitle">Add trusted people to alert in emergencies</p>
+
+      <div id="contactsList"></div>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <button class="btn btn-secondary" onclick="openAddContactForm()">+ Add Another Contact</button>
+      </div>
+
+      <div id="addContactForm" class="hidden">
+        <div class="divider"></div>
+        <h3 style="font-size: 16px; color: #333; margin-bottom: 20px;">Add New Contact</h3>
+
+        <div class="form-group">
+          <label>Contact Name *</label>
+          <input type="text" id="newContactName" placeholder="Name of trusted person" required>
+        </div>
+
+        <div class="form-group">
+          <label>Contact Phone *</label>
+          <input type="tel" id="newContactPhone" placeholder="Contact's phone number" required>
+        </div>
+
+        <div class="form-group">
+          <label>Contact Email *</label>
+          <input type="email" id="newContactEmail" placeholder="Contact's email" required>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          <button type="button" class="btn btn-primary" style="flex: 1;" onclick="addContact()">Add Contact</button>
+          <button type="button" class="btn btn-secondary" style="flex: 1;" onclick="closeAddContactForm()">Cancel</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 30px;">
+        <button class="btn btn-primary" onclick="goToWalkScreen()">Save & Start Walking</button>
+        <button class="btn btn-secondary" onclick="goToPage('signup.html')">Back</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/contacts.js"></script>
+</body>
+</html>

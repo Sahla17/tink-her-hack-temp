@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Walk - Walk With Me</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🚶 Start Your Walk</h1>
+    <p class="subtitle" id="subtitle">Your safety is our priority</p>
+
+    <!-- Status Bar -->
+    <div class="status-bar" id="statusBar">
+      👤 Ready to start your walk
+    </div>
+
+    <!-- Timer Display -->
+    <div class="timer-display" id="timerDisplay">5:00</div>
+
+    <!-- Profile Info -->
+    <div class="profile-display" id="profileInfo"></div>
+
+    <!-- Start/Stop Buttons -->
+    <div id="startSection">
+      <button onclick="startWalkTimer()">▶️ Start Walk Timer</button>
+      <button onclick="goHome()" class="secondary">← Go Home</button>
+    </div>
+
+    <button id="panicBtn" class="danger" style="display: none;" onclick="triggerEmergency()">
+      🚨 PANIC BUTTON - SOS
+    </button>
+
+    <!-- Safety Check Popup -->
+    <div class="modal" id="safetyModal">
+      <div class="modal-content">
+        <h2>❓ Are You Safe?</h2>
+        <p style="font-size: 1.05em; margin: 20px 0; color: #333;">
+          Please respond within 30 seconds
+        </p>
+        <div class="modal-buttons">
+          <button onclick="respondSafe()" class="secondary">✅ Yes, I'm Safe</button>
+          <button onclick="triggerEmergency()" class="danger">❌ No Help!</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Emergency Alert Popup -->
+    <div class="modal" id="emergencyModal">
+      <div class="modal-content">
+        <h2>🚨 EMERGENCY ALERT SENT</h2>
+        <p style="margin: 20px 0; color: #333;">
+          Your location and emergency message have been sent to all your emergency contacts.
+        </p>
+        <p id="locationLink" style="margin: 20px 0; color: #667eea; font-weight: 600;"></p>
+        <p style="color: #888; font-size: 0.9em;">
+          Emergency services have been contacted. Stay calm and safe.
+        </p>
+        <button onclick="endWalk()">Finish</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/walk.js"></script>
+</body>
+</html>
