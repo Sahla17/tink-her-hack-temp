@@ -2,27 +2,28 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# WALK WITH ME 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: LYORA
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: Sahla Nasrin cp - jyothi engineering college
+- Member 2: Shahanas Ruksana C P - jyothi engineering college
 
 ### Hosted Project Link
-[mention your project hosted link here]
+
 
 ### Project Description
-[2-3 lines about what your project does]
+"Walk With Me: Stay safe on every walk. If you don’t check in, your trusted contacts get your live location instantly."
 
 ### The Problem statement
-[What problem are you solving?]
+“Walk With Me monitors your walk and sends automatic alerts to trusted contacts with your live location if you don’t confirm you’re safe.”
 
 ### The Solution
-[How are you solving it?]
+“Walking alone can feel unsafe, stressful, and unpredictable. Our app ‘Walk With Me’ ensures your safety by alerting trusted contacts with your live location if you don’t check in.”
+
 
 ---
 
@@ -31,10 +32,10 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: JavaScript, HTML,CSS
+- Frameworks used: none
+- Libraries used: none
+- Tools used: V S code,Windows OS
 
 **For Hardware:**
 - Main components: [List main components]
@@ -46,10 +47,14 @@
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: Automatic Safety Check Timer
+Periodically prompts the user at fixed intervals to confirm their safety, ensuring continuous monitoring during solo walks.
+- Feature 2: Emergency SOS Activation
+Instantly triggers emergency mode through an SOS button, lack of response to safety prompts, or voice detection phrases like “help me”.
+- Feature 3: Live Location Sharing
+Automatically fetches the user’s real-time GPS location and sends a Google Maps live link to pre-configured emergency contacts.
+- Feature 4: Email & SMS Alert System
+Sends emergency notifications via Email and SMS using a Promise-based workflow to guarantee delivery confirmation before user notification
 
 ---
 
@@ -59,12 +64,23 @@ List the key features of your project:
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+# Clone the repository
+git clone https://github.com/your-username/walk-with-me.git
+
+# Move into the project directory
+cd walk-with-me
+
 ```
 
 #### Run
 ```bash
-[Run commands - e.g., npm start, python app.py]
+# Open the project
+# Option 1: Open index.html directly in your browser
+index.html
+
+# Option 2 (Recommended): Run using Live Server in VS Code
+# Right-click index.html → Open with Live Server
+
 ```
 
 ### For Hardware:
